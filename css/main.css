@@ -1,0 +1,16 @@
+body {
+    background: #000;
+    background-image: url("../images/fon2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.start {
+    background: #000;
+    background-image: url("../images/fon5.jpg");
+    background-size: cover;
+}
+
+.text-large {
+    font-size: xx-large;
+}

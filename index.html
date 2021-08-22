@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Monopoly pay</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body class="bg-dark">
+<div class="container">
+  <header class="d-flex justify-content-center py-3">
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="#" class="btn btn-warning shadow btn-lg" aria-current="page" id="newGame">Новая игра</a></li>
+    </ul>
+  </header>
+
+  <div class="row mt-5 d-flex justify-content-center" id="playersCard"></div>
+
+  <h2 class="text-white">История</h2>
+  <div id="history"></div>
+
+</div>
+
+<div class="modal modal-sheet position-static d-block position-absolute start py-5 shadow" id="modalStart">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-6 shadow">
+      <div class="modal-header border-bottom-0">
+        <h5 class="modal-title">Начало игры</h5>
+      </div>
+
+      <div class="modal-body py-0">
+        <div class="col">
+          <label for="startSum" class="form-label">Сумма у всех игроков в начале игры</label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text text-large">$</span>
+            </div>
+            <input type="text" class="form-control text-large" id="startSum" value="15 000 000" required>
+          </div>
+        </div>
+
+        <div class="col">
+          <label for="startSum" class="form-label">Награда за прохождение круга</label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text text-large">$</span>
+            </div>
+            <input type="text" class="form-control text-large" id="circleReward" value="2 000 000" required>
+          </div>
+        </div>
+
+        <div class="col">
+          <label for="startSum" class="form-label">Добавьте игроков</label>
+
+          <div class="col py-2" id="players">
+
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Введите имя" id="playerName">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-success d-flex align-items-center h-100" id="addPlayer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                  <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer flex-column border-top-0">
+        <button type="button" class="btn btn-lg btn-primary w-100 mx-0 mb-2" id="start">Начать</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
